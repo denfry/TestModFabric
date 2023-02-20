@@ -1,5 +1,8 @@
 package net.denfry.testmod;
 
+import net.denfry.testmod.block.ModBlocks;
+import net.denfry.testmod.item.ModItemGroup;
+import net.denfry.testmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +14,8 @@ public class TestMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModItemGroup.registerItemGroups();
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }

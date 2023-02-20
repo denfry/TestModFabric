@@ -18,6 +18,9 @@
 		"main": [
 			"net.denfry.testmod.TestMod"
 		],
+		"client": [
+			"net.denfry.testmod.TestModClient"
+		],
 		"fabric-datagen": [
 			"net.denfry.testmod.TestModDataGenerator"
 		]
