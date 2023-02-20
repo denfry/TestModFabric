@@ -1,41 +1,37 @@
 {
-  "schemaVersion": 1,
-  "id": "testmod",
-  "version": "${version}",
-
-  "name": "Test Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
-  "authors": [
-    "denfry"
-  ],
-  "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
-  },
-
-  "license": "MIT License",
-  "icon": "assets/modid/icon.png",
-
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "net.denfry.testmod.TestMod"
-    ],
-    "client": [
-      "net.denfry.testmod.TestModClient"
-    ]
-  },
-  "mixins": [
-    "testmod.mixins.json"
-  ],
-
-  "depends": {
-    "fabricloader": ">=0.14.11",
-    "fabric-api": "*",
-    "minecraft": "~1.19.3",
-    "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
-  }
+	"schemaVersion": 1,
+	"id": "testmod",
+	"version": "${version}",
+	"name": "TestMod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"denfry"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/testmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.denfry.testmod.TestMod"
+		],
+		"fabric-datagen": [
+			"net.denfry.testmod.TestModDataGenerator"
+		]
+	},
+	"mixins": [
+		"testmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.14",
+		"minecraft": "~1.19.3",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
 }
